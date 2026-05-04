@@ -1,86 +1,52 @@
----
+﻿---
 name: aido-wrapper
-description: unified wrapper workflow for zed and opencode. use when the user types commands prefixed with aido such as aido-init, aido-brainstorm, aido-grill, aido-plan-with-file, aido-breakdown, aido-execute-next, aido-document, aido-archive, aido-clean, aido-status, or aido-resume. coordinates planning-with-files, grill-with-docs, and code-documenter while storing all workflow state in .aido.
+description: Provides a suite of AI development lifecycle commands prefixed with /aido. This skill acts as the primary dispatcher for all aido-* workflows.
 ---
 
 # AIDO Wrapper
 
-You are `aido-wrapper`, an orchestration skill for AI development lifecycle in Zed + OpenCode.
+You are `aido-wrapper`, the primary orchestration skill for the AIDO development lifecycle. You are responsible for dispatching tasks to the correct workflow based on the user's command.
 
-## Core Rules
+## Core Mandate
+Your primary function is to recognize and route all `/aido-*` commands. When a user invokes one of the commands listed below, you MUST use the content of the linked `.md` file as your complete and authoritative set of instructions for that workflow.
 
-1. All commands must use `aido-*` prefix.
-2. All workflow state must be stored in `.aido/`.
-3. `.aido/task_plan.md` must contain only the active module.
-4. Every command must auto-refine relevant `.aido/` state before finishing.
-5. Brainstorming should be followed by `aido-grill` before execution planning is considered stable.
-6. `aido-*` commands are OpenCode slash-command workflows, not shell executables. Do not try to run `aido-*` in the terminal.
-7. Module completion order is mandatory:
-   1. `aido-document`
-   2. `aido-archive`
-   3. `aido-clean`
-8. Never run cleanup before documentation and archival are complete.
+## Commands
 
-## Command Dispatcher
+This skill provides the following commands. The instructions for each command are defined in the linked file.
 
-If user message starts with one of the following commands, run the matching behavior from references:
-- `aido-init`
-- `aido-brainstorm`
-- `aido-grill`
-- `aido-plan-with-file`
-- `aido-breakdown`
-- `aido-execute-next`
-- `aido-document`
-- `aido-archive`
-- `aido-clean`
-- `aido-status`
-- `aido-resume`
-
-Use references in this order:
-1. `references/commands.md` for command contract
-2. `references/workflow.md` for lifecycle and gates
-3. `references/documentation.md` for module documentation template
-4. `references/auto-refine.md` for state persistence rules
-5. `references/examples.md` for execution examples
+- **/aido-init:** [[../../opencode/commands/aido-init.md]]
+  - Initializes the AIDO workflow state and directory structure.
+- **/aido-brainstorm:** [[../../opencode/commands/aido-brainstorm.md]]
+  - Runs a role-based brainstorming session for a new module.
+- **/aido-grill:** [[../../opencode/commands/aido-grill.md]]
+  - Critically challenges and deepens a plan using the grill-with-docs methodology.
+- **/aido-plan-with-file:** [[../../opencode/commands/aido-plan-with-file.md]]
+  - Manually creates or re-syncs a plan using the planning-with-files style.
+- **/aido-breakdown:** [[../../opencode/commands/aido-breakdown.md]]
+  - Breaks down a module into small, actionable implementation phases.
+- **/aido-execute-next:** [[../../opencode/commands/aido-execute-next.md]]
+  - Executes the next single pending phase using a strict TDD workflow.
+- **/aido-document:** [[../../opencode/commands/aido-document.md]]
+  - Generates comprehensive documentation for a completed module.
+- **/aido-archive:** [[../../opencode/commands/aido-archive.md]]
+  - Archives the key workflow artifacts for a completed module.
+- **/aido-clean:** [[../../opencode/commands/aido-clean.md]]
+  - Safely cleans up the active state files for a completed module.
+- **/aido-status:** [[../../opencode/commands/aido-status.md]]
+  - Reports the current status of the AIDO workflow.
+- **/aido-resume:** [[../../opencode/commands/aido-resume.md]]
+  - Analyzes the current state and recommends the next logical action.
 
 ## Workflow Backbone
 
-1. `aido-init`
-2. `aido-brainstorm`
-3. `aido-grill`
-4. `aido-plan-with-file`
-5. `aido-breakdown`
-6. Loop `aido-execute-next` until all phases complete
-7. `aido-document`
-8. `aido-archive`
-9. `aido-clean`
+The typical workflow order is as follows:
+1.  `/aido-init`
+2.  `/aido-brainstorm`
+3.  `/aido-grill`
+4.  `/aido-breakdown`
+5.  Loop `/aido-execute-next`
+6.  `/aido-document`
+7.  `/aido-archive`
+8.  `/aido-clean`
 
-For state reporting and continuation:
-- `aido-status`
-- `aido-resume`
-
-## Implementation Notes
-
-- Apply planning-with-files style when generating plans and state files.
-- Apply grill-with-docs style after brainstorming to challenge assumptions, domain terms, and docs.
-- Apply code-documenter style when producing module docs and coverage report.
-- Apply GStack-style brainstorming via role-based synthesis.
-- Apply GSD-style phase slicing into small actionable phases.
-- Apply Superpowers-style TDD for each execution step.
-
-## Quality Gates
-
-Before marking module done:
-1. Every phase has clear done criteria and status `DONE`.
-2. Tests are executed and logged in `.aido/test_report.md`.
-3. Decisions and tradeoffs are logged in `.aido/decisions.md`.
-4. Documentation files exist:
-   - `.aido/modules/<module>.md`
-   - `.aido/reports/<module>-doc-coverage.md`
-5. Archives exist in all required archive folders.
-
-If any gate fails, block completion and explain what is missing.
-
-## Auto-Refine Rule
-
-After every command, update the relevant `.aido/` files so the repository state reflects the latest workflow state. Do not rely on chat history as the source of truth.
+The `/aido-status` and `/aido-resume` commands can be used at any point.
