@@ -11,7 +11,7 @@ OPENCODE_COMMAND_DIR="$OPENCODE_CONFIG_DIR/command"
 
 print_header() {
   echo "=============================================="
-  echo " AIDO Full Setup Installer (OpenCode)"
+  echo " AIDO Full Setup Installer (Multi-Platform)"
   echo "=============================================="
 }
 
@@ -37,7 +37,7 @@ install_grill_with_docs() {
 }
 
 install_commands() {
-  echo "[5/5] Installing AIDO OpenCode commands..."
+  echo "[5/5] Installing AIDO slash commands..."
 
   tmp_dir="$(mktemp -d)"
   trap 'rm -rf "$tmp_dir"' EXIT

@@ -1,6 +1,6 @@
-# AIDO Skills Wrapper
+# AIDO Skills Wrapper (Multi-Platform)
 
-`aido-wrapper` is a skill wrapper/orchestrator for AI development workflows in Zed + OpenCode.
+`aido-wrapper` is a skill wrapper/orchestrator for AI development workflows compatible with **Google Antigravity**, **OpenCode**, **GitHub Copilot**, and **Gemini CLI**.
 
 This wrapper combines:
 - planning-with-files
@@ -33,7 +33,7 @@ Install source: `https://github.com/mattpocock/skills --skill grill-with-docs`
 npx skills add https://github.com/mdhb2/aido-wrapper --skill aido-wrapper -a opencode
 ```
 
-This installs the `aido-wrapper` skill only. It does not install the `/aido-*` OpenCode commands.
+This installs the `aido-wrapper` skill only. It works across all supported AI assistants (Antigravity, Copilot, Gemini CLI, etc.).
 
 ## Install Full Setup
 
@@ -54,7 +54,7 @@ The installer copies command files to both OpenCode command locations for compat
 
 ## AIDO Commands
 
-These are OpenCode slash commands, not terminal executables. Run them inside OpenCode with the leading `/`.
+These are AI assistant slash commands. Run them inside your coding assistant with the leading `/`.
 
 - `/aido-init`
 - `/aido-brainstorm`

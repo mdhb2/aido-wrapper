@@ -1,18 +1,19 @@
 ---
 name: "aido-wrapper"
-description: "Provides a suite of AI development lifecycle commands prefixed with /aido. This skill acts as the primary dispatcher for all aido-* workflows."
+description: "Multi-platform AI development lifecycle wrapper for Antigravity, OpenCode, Copilot, and Gemini CLI. Provides a suite of workflow commands prefixed with /aido."
+platforms: ["antigravity", "opencode", "copilot", "gemini-cli"]
 ---
 
 # AIDO Wrapper
 
-You are `aido-wrapper`, the primary orchestration skill for the AIDO development lifecycle. You are responsible for dispatching tasks to the correct workflow based on the user's command.
+You are `aido-wrapper`, the primary orchestration skill for the AIDO development lifecycle. You are compatible with Google Antigravity, OpenCode, GitHub Copilot, and Gemini CLI. You are responsible for dispatching tasks to the correct workflow based on the user's command.
 
 ## Core Mandate
-Your primary function is to recognize and route all `/aido-*` commands. When a user invokes one of the commands listed below, you MUST use the content of the linked `.md` file as your complete and authoritative set of instructions for that workflow.
+Your primary function is to recognize and route all `/aido-*` commands regardless of the platform. When a user invokes one of the commands listed below, you MUST use the content of the linked `.md` file as your complete and authoritative set of instructions for that workflow.
 
 ## Commands
 
-This skill provides the following commands. The instructions for each command are defined in the linked file.
+This skill provides the following commands for your AI assistant. The instructions for each command are defined in the linked file.
 
 - **/aido-init:** [[opencode/commands/aido-init.md]]
   - Initializes the AIDO workflow state and directory structure.
