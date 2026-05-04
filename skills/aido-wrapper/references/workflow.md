@@ -1,4 +1,4 @@
-﻿# AIDO Workflow Policy
+# AIDO Workflow Policy
 
 ## Lifecycle
 1. Initialize state with `aido-init`.

@@ -1,4 +1,4 @@
-﻿---
+---
 name: aido-wrapper
 description: unified wrapper workflow for zed and opencode. use when the user types commands prefixed with aido such as aido-init, aido-brainstorm, aido-plan-with-file, aido-breakdown, aido-execute-next, aido-document, aido-archive, aido-clean, aido-status, or aido-resume. coordinates planning-with-files and code-documenter while storing all workflow state in .aido.
 ---

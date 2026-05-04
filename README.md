@@ -1,4 +1,4 @@
-﻿# AIDO Skills Wrapper
+# AIDO Skills Wrapper
 
 `aido-wrapper` is a skill wrapper/orchestrator for AI development workflows in Zed + OpenCode.
 

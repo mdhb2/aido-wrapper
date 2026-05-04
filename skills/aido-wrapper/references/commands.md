@@ -1,4 +1,4 @@
-﻿# AIDO Command Contracts
+# AIDO Command Contracts
 
 ## aido-init
 Create:

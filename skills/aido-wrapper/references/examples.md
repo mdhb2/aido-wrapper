@@ -1,4 +1,4 @@
-﻿# AIDO Usage Examples
+# AIDO Usage Examples
 
 ## Login Module Example Prompt
 

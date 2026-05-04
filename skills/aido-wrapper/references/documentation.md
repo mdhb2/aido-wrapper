@@ -1,4 +1,4 @@
-﻿# AIDO Documentation Standard
+# AIDO Documentation Standard
 
 Create two files per completed module:
 1. `.aido/modules/<module>.md`
