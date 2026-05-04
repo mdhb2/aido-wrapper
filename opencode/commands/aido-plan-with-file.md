@@ -2,7 +2,9 @@
 description: Create AIDO active module, spec, and task plan files
 ---
 
-Use the `aido-wrapper` skill and run `aido-plan-with-file`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-plan-with-file` workflow.
+
+Do not run `aido-plan-with-file` as a shell command.
 
 User request:
 `$ARGUMENTS`

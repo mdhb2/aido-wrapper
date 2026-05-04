@@ -54,6 +54,8 @@ The installer copies command files to both OpenCode command locations for compat
 
 ## AIDO Commands
 
+These are OpenCode slash commands, not terminal executables. Run them inside OpenCode with the leading `/`.
+
 - `/aido-init`
 - `/aido-brainstorm`
 - `/aido-grill`

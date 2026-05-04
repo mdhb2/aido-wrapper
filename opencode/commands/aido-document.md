@@ -2,7 +2,9 @@
 description: Document the completed AIDO active module
 ---
 
-Use the `aido-wrapper` skill and run `aido-document`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-document` workflow.
+
+Do not run `aido-document` as a shell command.
 
 Use code-documenter style to create:
 - `.aido/modules/<module>.md`

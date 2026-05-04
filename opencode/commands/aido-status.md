@@ -2,7 +2,9 @@
 description: Report current AIDO workflow status
 ---
 
-Use the `aido-wrapper` skill and run `aido-status`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-status` workflow.
+
+Do not run `aido-status` as a shell command.
 
 Read `.aido/` and report:
 - active module

@@ -2,7 +2,9 @@
 description: Run AIDO role-based brainstorming for a module
 ---
 
-Use the `aido-wrapper` skill and run `aido-brainstorm`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-brainstorm` workflow.
+
+Do not run `aido-brainstorm` as a shell command.
 
 User request:
 `$ARGUMENTS`

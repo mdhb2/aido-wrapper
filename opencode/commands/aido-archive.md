@@ -2,7 +2,9 @@
 description: Archive completed AIDO module workflow files
 ---
 
-Use the `aido-wrapper` skill and run `aido-archive`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-archive` workflow.
+
+Do not run `aido-archive` as a shell command.
 
 Archive:
 - `.aido/task_plan.md` to `.aido/archive/task_plans/<YYYY-MM-DD>-<module>-task-plan.md`

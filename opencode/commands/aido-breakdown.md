@@ -2,7 +2,9 @@
 description: Break the active AIDO module into small implementation phases
 ---
 
-Use the `aido-wrapper` skill and run `aido-breakdown`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-breakdown` workflow.
+
+Do not run `aido-breakdown` as a shell command.
 
 Read `.aido/active_module.md`, `.aido/specs/`, and `.aido/task_plan.md`.
 

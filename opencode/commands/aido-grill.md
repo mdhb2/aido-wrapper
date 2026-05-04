@@ -2,7 +2,9 @@
 description: Deepen and challenge the active AIDO module with grill-with-docs
 ---
 
-Use the `aido-wrapper` skill and the `grill-with-docs` skill. Run `aido-grill`.
+Use the `aido-wrapper` skill and the `grill-with-docs` skill. Treat this slash command as the `aido-grill` workflow.
+
+Do not run `aido-grill` as a shell command.
 
 User request:
 `$ARGUMENTS`

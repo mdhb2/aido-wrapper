@@ -2,7 +2,9 @@
 description: Clean AIDO active state after docs and archive are present
 ---
 
-Use the `aido-wrapper` skill and run `aido-clean`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-clean` workflow.
+
+Do not run `aido-clean` as a shell command.
 
 Clean only if documentation and archive files exist for the active module.
 

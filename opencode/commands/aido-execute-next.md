@@ -2,7 +2,9 @@
 description: Execute the next pending AIDO phase with TDD
 ---
 
-Use the `aido-wrapper` skill and run `aido-execute-next`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-execute-next` workflow.
+
+Do not run `aido-execute-next` as a shell command.
 
 Execute only the next `PENDING` phase from `.aido/task_plan.md`.
 

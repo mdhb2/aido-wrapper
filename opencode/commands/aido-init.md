@@ -2,7 +2,9 @@
 description: Initialize AIDO workflow state in .aido
 ---
 
-Use the `aido-wrapper` skill and run `aido-init`.
+Use the `aido-wrapper` skill. Treat this slash command as the `aido-init` workflow.
+
+Do not run `aido-init` as a shell command.
 
 Create the required `.aido/` structure in the current project:
 - `.aido/active_module.md`

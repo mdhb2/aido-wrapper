@@ -14,11 +14,12 @@ You are `aido-wrapper`, an orchestration skill for AI development lifecycle in Z
 3. `.aido/task_plan.md` must contain only the active module.
 4. Every command must auto-refine relevant `.aido/` state before finishing.
 5. Brainstorming should be followed by `aido-grill` before execution planning is considered stable.
-6. Module completion order is mandatory:
+6. `aido-*` commands are OpenCode slash-command workflows, not shell executables. Do not try to run `aido-*` in the terminal.
+7. Module completion order is mandatory:
    1. `aido-document`
    2. `aido-archive`
    3. `aido-clean`
-7. Never run cleanup before documentation and archival are complete.
+8. Never run cleanup before documentation and archival are complete.
 
 ## Command Dispatcher
 
