@@ -28,38 +28,50 @@ This wrapper combines:
 npx skills add https://github.com/mdhb2/aido-wrapper --skill aido-wrapper -a opencode
 ```
 
+This installs the `aido-wrapper` skill only. It does not install the `/aido-*` OpenCode commands.
+
 ## Install Full Setup
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/mdhb2/aido-wrapper/refs/heads/master/scripts/install-aido.sh | bash
 ```
 
+This installs:
+- the `aido-wrapper` skill
+- planning-with-files
+- code-documenter
+- OpenCode command files for `/aido-*`
+
+The installer copies command files to both OpenCode command locations for compatibility:
+- `~/.config/opencode/commands/`
+- `~/.config/opencode/command/`
+
 ## AIDO Commands
 
-- `aido-init`
-- `aido-brainstorm`
-- `aido-plan-with-file`
-- `aido-breakdown`
-- `aido-execute-next`
-- `aido-document`
-- `aido-archive`
-- `aido-clean`
-- `aido-status`
-- `aido-resume`
+- `/aido-init`
+- `/aido-brainstorm`
+- `/aido-plan-with-file`
+- `/aido-breakdown`
+- `/aido-execute-next`
+- `/aido-document`
+- `/aido-archive`
+- `/aido-clean`
+- `/aido-status`
+- `/aido-resume`
 
 All commands use the `aido-*` prefix, and all workflow state is stored in `.aido/`.
 
 ## Example Workflow
 
-1. Run `aido-init` to create the `.aido` state folder.
-2. Run `aido-brainstorm` for role-based brainstorming.
-3. Run `aido-plan-with-file` to create the active module, spec, and task plan.
-4. Run `aido-breakdown` to split the active module into small phases.
-5. Repeat `aido-execute-next` until all phases are completed with TDD.
-6. Run `aido-document` to generate module documentation and doc coverage.
-7. Run `aido-archive` to archive task plan, progress, and decisions.
-8. Run `aido-clean` to safely clean active state files.
-9. Run `aido-status` or `aido-resume` anytime to continue from the latest state.
+1. Run `/aido-init` to create the `.aido` state folder.
+2. Run `/aido-brainstorm` for role-based brainstorming.
+3. Run `/aido-plan-with-file` to create the active module, spec, and task plan.
+4. Run `/aido-breakdown` to split the active module into small phases.
+5. Repeat `/aido-execute-next` until all phases are completed with TDD.
+6. Run `/aido-document` to generate module documentation and doc coverage.
+7. Run `/aido-archive` to archive task plan, progress, and decisions.
+8. Run `/aido-clean` to safely clean active state files.
+9. Run `/aido-status` or `/aido-resume` anytime to continue from the latest state.
 
 ## .aido Folder Structure
 
@@ -83,7 +95,7 @@ All commands use the `aido-*` prefix, and all workflow state is stored in `.aido
 ## Cleanup Policy
 
 - `.aido/task_plan.md` must contain only the active module.
-- After a module is completed: document first (`aido-document`), archive next (`aido-archive`), then clean (`aido-clean`).
+- After a module is completed: document first (`/aido-document`), archive next (`/aido-archive`), then clean (`/aido-clean`).
 - `aido-clean` is allowed to remove only:
   - `.aido/task_plan.md`
   - `.aido/progress.md`
