@@ -14,3 +14,8 @@ Break the active module into small phases. Each phase must include:
 - status
 
 Use status values: `PENDING`, `IN_PROGRESS`, `DONE`, or `BLOCKED`.
+
+Auto-refine the plan files before finishing:
+- update `.aido/task_plan.md`
+- update `.aido/progress.md`
+- update `.aido/decisions.md` when phase order, scope, or risk decisions are made

@@ -14,5 +14,6 @@ Use strict TDD:
 - update `.aido/test_report.md`
 - update `.aido/decisions.md`
 - update `.aido/task_plan.md`
+- update `.aido/findings.md` when new findings appear
 
 Do not start another phase after this phase is complete.

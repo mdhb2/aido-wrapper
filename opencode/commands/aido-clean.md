@@ -6,6 +6,8 @@ Use the `aido-wrapper` skill and run `aido-clean`.
 
 Clean only if documentation and archive files exist for the active module.
 
+Before cleanup, record the cleanup decision and final module state in durable `.aido/` files.
+
 Clean:
 - `.aido/task_plan.md`
 - `.aido/progress.md`

@@ -7,3 +7,5 @@ Use the `aido-wrapper` skill and run `aido-resume`.
 Read `.aido/` and explain the next best action from the latest workflow state.
 
 If no `.aido/` state exists, recommend starting with `aido-init`.
+
+If state exists, recommend the next AIDO command and mention which `.aido/` files support that recommendation.

@@ -13,3 +13,5 @@ Use planning-with-files style to create or update:
 - `.aido/task_plan.md`
 
 Ensure `.aido/task_plan.md` contains only the active module.
+
+This command is also the manual re-sync command. Use it whenever brainstorm, grill, breakdown, execution, documentation, archive, or cleanup reveals changes that should be reflected in the active module state.

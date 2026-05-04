@@ -23,3 +23,8 @@ The module documentation must cover:
 - tests
 - extension notes
 - known limitations
+
+Auto-refine the plan files before finishing:
+- update `.aido/progress.md`
+- update `.aido/task_plan.md`
+- update `.aido/decisions.md` when documentation reveals gaps or limitations

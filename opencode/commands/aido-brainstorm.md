@@ -15,3 +15,11 @@ Brainstorm using these roles:
 - Developer
 
 Produce a concise synthesis with scope, risks, acceptance criteria, and recommended implementation direction.
+
+Auto-persist the brainstorm into `.aido/` before finishing:
+- update `.aido/findings.md`
+- update `.aido/active_module.md`
+- update `.aido/specs/<module>-spec.md`
+- update `.aido/task_plan.md`
+
+Recommend `/aido-grill` as the next step to deepen the plan before breakdown.

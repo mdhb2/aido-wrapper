@@ -5,6 +5,7 @@
 This wrapper combines:
 - planning-with-files
 - code-documenter
+- grill-with-docs
 - GStack-style brainstorming
 - GSD-style phase breakdown
 - Superpowers-style TDD execution
@@ -21,6 +22,10 @@ This wrapper combines:
    https://github.com/obra/superpowers
 5. GSD reference  
    https://github.com/gsd-build/get-shit-done
+6. grill-with-docs  
+   https://skills.sh/mattpocock/skills/grill-with-docs
+
+Install source: `https://github.com/mattpocock/skills --skill grill-with-docs`
 
 ## Install Wrapper Only
 
@@ -40,6 +45,7 @@ This installs:
 - the `aido-wrapper` skill
 - planning-with-files
 - code-documenter
+- grill-with-docs
 - OpenCode command files for `/aido-*`
 
 The installer copies command files to both OpenCode command locations for compatibility:
@@ -50,6 +56,7 @@ The installer copies command files to both OpenCode command locations for compat
 
 - `/aido-init`
 - `/aido-brainstorm`
+- `/aido-grill`
 - `/aido-plan-with-file`
 - `/aido-breakdown`
 - `/aido-execute-next`
@@ -61,17 +68,31 @@ The installer copies command files to both OpenCode command locations for compat
 
 All commands use the `aido-*` prefix, and all workflow state is stored in `.aido/`.
 
+Every AIDO command is file-first: it reads `.aido/`, performs its workflow step, and auto-refines the relevant `.aido/` files before finishing.
+
 ## Example Workflow
 
 1. Run `/aido-init` to create the `.aido` state folder.
-2. Run `/aido-brainstorm` for role-based brainstorming.
-3. Run `/aido-plan-with-file` to create the active module, spec, and task plan.
-4. Run `/aido-breakdown` to split the active module into small phases.
-5. Repeat `/aido-execute-next` until all phases are completed with TDD.
-6. Run `/aido-document` to generate module documentation and doc coverage.
-7. Run `/aido-archive` to archive task plan, progress, and decisions.
-8. Run `/aido-clean` to safely clean active state files.
-9. Run `/aido-status` or `/aido-resume` anytime to continue from the latest state.
+2. Run `/aido-brainstorm` for role-based brainstorming and initial file persistence.
+3. Run `/aido-grill` to challenge assumptions and refine the plan with grill-with-docs.
+4. Run `/aido-plan-with-file` when you need a manual plan re-sync.
+5. Run `/aido-breakdown` to split the active module into small phases.
+6. Repeat `/aido-execute-next` until all phases are completed with TDD.
+7. Run `/aido-document` to generate module documentation and doc coverage.
+8. Run `/aido-archive` to archive task plan, progress, and decisions.
+9. Run `/aido-clean` to safely clean active state files.
+10. Run `/aido-status` or `/aido-resume` anytime to continue from the latest state.
+
+## Auto-Refine Policy
+
+- `/aido-brainstorm` updates findings, active module, spec, and task plan.
+- `/aido-grill` updates findings, decisions, spec, and task plan.
+- `/aido-breakdown` updates task plan, progress, and decisions.
+- `/aido-execute-next` updates task plan, progress, test report, decisions, and findings when needed.
+- `/aido-document` updates module docs, doc coverage, progress, task plan, and decisions when needed.
+- `/aido-archive` updates archive files, progress, decisions, and task plan.
+- `/aido-clean` records cleanup state before clearing allowed active files.
+- `/aido-status` and `/aido-resume` report state and recommend next actions without destructive cleanup.
 
 ## .aido Folder Structure
 

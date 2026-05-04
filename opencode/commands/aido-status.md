@@ -13,3 +13,5 @@ Read `.aido/` and report:
 - whether cleanup is allowed
 
 Keep the report concise and actionable.
+
+If the state is inconsistent, report the repair steps. Do not perform destructive cleanup.

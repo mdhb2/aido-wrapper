@@ -2,21 +2,24 @@
 
 ## Login Module Example Prompt
 
-`aido-brainstorm: create login module with email/password, input validation, invalid credential error, session handling, redirect after success, and tests.`
+`/aido-brainstorm create login module with email/password, input validation, invalid credential error, session handling, redirect after success, and tests.`
 
 ## Example End-to-End Flow
 
-1. `aido-init`
-2. `aido-brainstorm: create login module with email/password, input validation, invalid credential error, session handling, redirect after success, and tests.`
-3. `aido-plan-with-file: module login`
-4. `aido-breakdown`
-5. `aido-execute-next`
-6. `aido-execute-next` (repeat until no pending phase)
-7. `aido-document`
-8. `aido-archive`
-9. `aido-clean`
-10. `aido-status`
-11. `aido-resume`
+1. `/aido-init`
+2. `/aido-brainstorm create login module with email/password, input validation, invalid credential error, session handling, redirect after success, and tests.`
+3. `/aido-grill login module`
+4. `/aido-plan-with-file module login`
+5. `/aido-breakdown`
+6. `/aido-execute-next`
+7. `/aido-execute-next` (repeat until no pending phase)
+8. `/aido-document`
+9. `/aido-archive`
+10. `/aido-clean`
+11. `/aido-status`
+12. `/aido-resume`
+
+`/aido-brainstorm`, `/aido-grill`, `/aido-breakdown`, `/aido-execute-next`, `/aido-document`, `/aido-archive`, and `/aido-clean` all auto-refine the relevant files in `.aido/`.
 
 ## Example Breakdown Shape
 
