@@ -1,8 +1,8 @@
 ﻿# AIDO Skills Wrapper
 
-`aido-wrapper` adalah skill wrapper/orchestrator untuk workflow AI development di Zed + OpenCode.
+`aido-wrapper` is a skill wrapper/orchestrator for AI development workflows in Zed + OpenCode.
 
-Wrapper ini menyatukan pola:
+This wrapper combines:
 - planning-with-files
 - code-documenter
 - GStack-style brainstorming
@@ -47,19 +47,19 @@ curl -fsSL https://raw.githubusercontent.com/userxys/aido-skills-wrapper/main/sc
 - `aido-status`
 - `aido-resume`
 
-Semua command menggunakan prefix `aido-*` dan seluruh state disimpan di `.aido/`.
+All commands use the `aido-*` prefix, and all workflow state is stored in `.aido/`.
 
 ## Example Workflow
 
-1. Jalankan `aido-init` untuk membuat state folder `.aido`.
-2. Jalankan `aido-brainstorm` untuk role-based brainstorming.
-3. Jalankan `aido-plan-with-file` untuk membuat active module + spec + task plan.
-4. Jalankan `aido-breakdown` untuk memecah active module menjadi fase kecil.
-5. Ulangi `aido-execute-next` sampai semua fase selesai dengan TDD.
-6. Jalankan `aido-document` untuk membuat dokumentasi modul dan doc coverage.
-7. Jalankan `aido-archive` untuk arsip task plan, progress, dan decisions.
-8. Jalankan `aido-clean` untuk bersihkan state aktif yang aman dibersihkan.
-9. Jalankan `aido-status` atau `aido-resume` kapan pun untuk melanjutkan dari state terakhir.
+1. Run `aido-init` to create the `.aido` state folder.
+2. Run `aido-brainstorm` for role-based brainstorming.
+3. Run `aido-plan-with-file` to create the active module, spec, and task plan.
+4. Run `aido-breakdown` to split the active module into small phases.
+5. Repeat `aido-execute-next` until all phases are completed with TDD.
+6. Run `aido-document` to generate module documentation and doc coverage.
+7. Run `aido-archive` to archive task plan, progress, and decisions.
+8. Run `aido-clean` to safely clean active state files.
+9. Run `aido-status` or `aido-resume` anytime to continue from the latest state.
 
 ## .aido Folder Structure
 
@@ -82,14 +82,14 @@ Semua command menggunakan prefix `aido-*` dan seluruh state disimpan di `.aido/`
 
 ## Cleanup Policy
 
-- `.aido/task_plan.md` hanya boleh berisi active module.
-- Setelah module selesai: dokumentasikan dulu (`aido-document`), archive dulu (`aido-archive`), baru cleanup (`aido-clean`).
-- `aido-clean` hanya boleh menghapus:
+- `.aido/task_plan.md` must contain only the active module.
+- After a module is completed: document first (`aido-document`), archive next (`aido-archive`), then clean (`aido-clean`).
+- `aido-clean` is allowed to remove only:
   - `.aido/task_plan.md`
   - `.aido/progress.md`
   - `.aido/test_report.md`
   - `.aido/active_module.md`
-- `aido-clean` tidak boleh menghapus:
+- `aido-clean` must not remove:
   - `.aido/findings.md`
   - `.aido/modules/`
   - `.aido/archive/`
