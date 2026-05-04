@@ -31,7 +31,7 @@ npx skills add https://github.com/mdhb2/aido-wrapper --skill aido-wrapper -a ope
 ## Install Full Setup
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mdhb2/aido-wrapper/master/scripts/install-aido.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mdhb2/aido-wrapper/refs/heads/master/scripts/install-aido.sh | bash
 ```
 
 ## AIDO Commands
