@@ -13,6 +13,11 @@ print_header() {
 
 install_wrapper() {
   echo "[1/3] Installing aido-wrapper..."
+  echo "      Source: $REPO_URL"
+  if [[ "$REPO_URL" == *"userxys/aido-skills-wrapper"* ]]; then
+    echo "Error: installer is pointing to a deprecated repository URL."
+    exit 1
+  fi
   npx skills add "$REPO_URL" --skill aido-wrapper -a opencode -y
 }
 
