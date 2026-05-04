@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/userxys/aido-skills-wrapper"
+REPO_URL="https://github.com/mdhb2/aido-wrapper"
 PLANNING_URL="https://github.com/othmanadi/planning-with-files"
 DOCUMENTER_URL="https://github.com/Jeffallan/claude-skills"
 
