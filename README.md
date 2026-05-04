@@ -25,13 +25,13 @@ This wrapper combines:
 ## Install Wrapper Only
 
 ```bash
-npx skills add https://github.com/userxys/aido-skills-wrapper --skill aido-wrapper -a opencode
+npx skills add https://github.com/mdhb2/aido-wrapper --skill aido-wrapper -a opencode
 ```
 
 ## Install Full Setup
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/userxys/aido-skills-wrapper/main/scripts/install-aido.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mdhb2/aido-wrapper/main/scripts/install-aido.sh | bash
 ```
 
 ## AIDO Commands
