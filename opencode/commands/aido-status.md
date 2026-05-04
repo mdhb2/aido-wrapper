@@ -1,19 +1,20 @@
+﻿description: Report current AIDO workflow status
 ---
-description: Report current AIDO workflow status
----
+You are executing the `aido-status` workflow. Your purpose is to provide a concise summary of the current project state.
 
-Use the `aido-wrapper` skill. Treat this slash command as the `aido-status` workflow.
+**Core Principles:**
+1. This is a slash command workflow, not a shell executable.
+2. This is a read-only operation. Do not modify any files.
 
-Do not run `aido-status` as a shell command.
+**Procedure:**
+1.  **Read State:** Read the contents of the `.aido/` directory.
 
-Read `.aido/` and report:
-- active module
-- current phase
-- completed phases
-- next phase
-- blockers
-- whether cleanup is allowed
+2.  **Generate Report:** Provide a concise and actionable report covering:
+    - Active module name
+    - Current phase (from `task_plan.md` and `progress.md`)
+    - List of completed phases
+    - The next pending phase
+    - Any identified blockers
+    - Whether the module is ready for cleanup (docs and archives exist)
 
-Keep the report concise and actionable.
-
-If the state is inconsistent, report the repair steps. Do not perform destructive cleanup.
+3.  **Handle Inconsistency:** If the state files seem inconsistent, report the issue and suggest steps for manual repair. Do not perform any destructive actions.

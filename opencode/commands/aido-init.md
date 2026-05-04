@@ -1,23 +1,28 @@
----
+﻿---
 description: Initialize AIDO workflow state in .aido
 ---
+You are executing the `aido-init` workflow. Your purpose is to create the necessary directory and file structure for the AIDO process.
 
-Use the `aido-wrapper` skill. Treat this slash command as the `aido-init` workflow.
+**Core Principles:**
+1. This is a slash command workflow, not a shell executable.
+2. All state is stored in the `.aido/` directory.
 
-Do not run `aido-init` as a shell command.
+**Procedure:**
+Create the following directory and file structure in the current project. If a file or directory already exists, do not overwrite or delete it.
 
-Create the required `.aido/` structure in the current project:
-- `.aido/active_module.md`
-- `.aido/task_plan.md`
-- `.aido/findings.md`
-- `.aido/decisions.md`
-- `.aido/progress.md`
-- `.aido/test_report.md`
-- `.aido/specs/`
-- `.aido/modules/`
-- `.aido/reports/`
-- `.aido/archive/task_plans/`
-- `.aido/archive/progress/`
-- `.aido/archive/decisions/`
+- `.aido/`
+  - `active_module.md`
+  - `task_plan.md`
+  - `findings.md`
+  - `decisions.md`
+  - `progress.md`
+  - `test_report.md`
+  - `specs/` (directory)
+  - `modules/` (directory)
+  - `reports/` (directory)
+  - `archive/`
+    - `task_plans/` (directory)
+    - `progress/` (directory)
+    - `decisions/` (directory)
 
-Report what was created and do not remove existing AIDO history.
+**Conclude:** Report the list of created files and directories.
